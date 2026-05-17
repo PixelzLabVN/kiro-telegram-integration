@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Telegram Task Start Notification",
+  "description": "When a spec task begins execution, send a notification to Telegram indicating the task has started.",
+  "version": "2",
+  "when": {
+    "type": "preTaskExecution"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A spec task is about to start. Use the telegram_notify tool to send a notification. Format the message EXACTLY like this template:\n\n┌─ 🚀 TASK STARTED ───────────────\n│\n│ 📋 <task name/description>\n│ ⏳ Status: In Progress\n│\n└─────────────────────────────────\n\nThen proceed normally with the task — do NOT wait for a response or block execution."
+  }
+}

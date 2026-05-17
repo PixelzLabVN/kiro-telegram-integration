@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Telegram Task Done Notification",
+  "description": "When a spec task completes execution, send a notification to Telegram indicating the task is done.",
+  "version": "2",
+  "when": {
+    "type": "postTaskExecution"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A spec task has just completed. Use the telegram_notify tool to send a notification. Format the message EXACTLY like this template:\n\n┌─ ✅ TASK COMPLETE ──────────────\n│\n│ 📋 <task name/description>\n│ 📊 <brief result summary>\n│\n└─────────────────────────────────\n\nThen proceed normally — do NOT wait for a response or block execution."
+  }
+}

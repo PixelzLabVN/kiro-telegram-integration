@@ -1,0 +1,34 @@
+{
+  "name": "kiro-telegram-integration",
+  "version": "0.1.0",
+  "description": "Kiro IDE Telegram integration for remote approval and information gathering",
+  "license": "MIT",
+  "type": "module",
+  "author": "@itmanz - PixelzLab",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PixelzLabVN/kiro-telegram-integration.git"
+  },
+  "bin": {
+    "kiro-telegram-integration": "dist/mcp/server.js"
+  },
+  "main": "dist/core/IntegrationService.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest --run",
+    "dev": "tsc --watch"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "@types/vscode": "^1.96.0",
+    "fast-check": "^3.23.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.2.1"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+.env
+.telegram-signals/
+bridge/node_modules/
+
+.kiro/specs

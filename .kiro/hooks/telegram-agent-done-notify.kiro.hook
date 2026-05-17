@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Telegram Agent Done Notification",
+  "description": "When the agent finishes processing, send a summary notification to Telegram.",
+  "version": "2",
+  "when": {
+    "type": "agentStop"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "The agent has finished processing. Use the telegram_notify tool to send a notification. Format the message EXACTLY like this template:\n\n┌─ 🏁 SESSION COMPLETE ───────────\n│\n│ 📝 <what was accomplished in 1 sentence>\n│ 📂 Files: <changed files or 'None'>\n│ 🕐 <current time HH:MM>\n│\n└─────────────────────────────────\n\nThen stop — do NOT continue with any other work."
+  }
+}

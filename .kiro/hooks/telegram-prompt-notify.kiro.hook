@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Telegram Prompt Notification",
+  "description": "When a prompt is submitted to the agent, send a notification to Telegram with the prompt content.",
+  "version": "2",
+  "when": {
+    "type": "promptSubmit"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A new prompt has been submitted. Use the telegram_notify tool to send a notification. Format the message EXACTLY like this template:\n\n┌─ 💬 NEW PROMPT ─────────────────\n│\n│ 🗣️ <summarize prompt in 1 short sentence>\n│ 🕐 <current time HH:MM>\n│\n└─────────────────────────────────\n\nKeep the summary under 80 characters. Then proceed normally with the original task — do NOT wait for a response or block execution."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "enabled": false,
+  "name": "Telegram Shell Notification (Script)",
+  "description": "When a shell command is about to run, send a notification to Telegram via the standalone script. Does not require MCP server.",
+  "version": "1",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": [
+      "shell"
+    ]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "node scripts/telegram-notify.mjs \"Shell Command\""
+  }
+}

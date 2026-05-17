@@ -1,0 +1,16 @@
+{
+  "enabled": false,
+  "name": "Telegram Write Notification (Script)",
+  "description": "When a file write is about to happen, send a notification to Telegram via the standalone script. Does not require MCP server.",
+  "version": "1",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": [
+      "write"
+    ]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "node scripts/telegram-notify.mjs \"File Write\""
+  }
+}

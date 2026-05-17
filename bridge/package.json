@@ -1,0 +1,26 @@
+{
+  "name": "kiro-telegram-bridge",
+  "version": "1.0.0",
+  "description": "Bidirectional bridge between Kiro IDE and Telegram via Chrome DevTools Protocol",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "kiro-telegram-bridge": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@gramio/format": "^0.8.0",
+    "ws": "^8.18.0"
+  },
+  "author": "@itmanz - PixelzLab",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PixelzLabVN/kiro-telegram-integration.git"
+  }
+}

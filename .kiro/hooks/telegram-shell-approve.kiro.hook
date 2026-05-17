@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Telegram Shell Notification",
+  "description": "When a shell command is about to run, send a formatted notification to Telegram showing the command.",
+  "version": "2",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": [
+      "shell"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A shell command is about to be executed. Use the telegram_notify tool to send a notification. Format the message EXACTLY like this template with box-drawing characters:\n\n┌─ 🔧 SHELL ──────────────────────\n│\n│ $ <the actual command>\n│ 💡 <what it does in ~5 words>\n│\n└─────────────────────────────────\n\nKeep it concise. Then proceed normally — do NOT wait for a response or block execution."
+  }
+}

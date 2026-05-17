@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Telegram Write Notification",
+  "description": "When a file write is about to happen, send a formatted notification to Telegram showing what is being changed.",
+  "version": "2",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": [
+      "write"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A file write is about to be executed. Use the telegram_notify tool to send a notification formatted with box-drawing characters for a developer terminal aesthetic. Format the message EXACTLY like this template:\n\n┌─ 📝 FILE WRITE ─────────────────\n│\n│ 📂 <file path being written>\n│ 📋 <one-line summary of the change>\n│\n└─────────────────────────────────\n\nIMPORTANT: Keep it concise — max 3 lines of content. Do NOT send if you cannot determine the file path. Then proceed normally — do NOT wait for a response or block execution."
+  }
+}
